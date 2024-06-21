@@ -6,10 +6,10 @@ const usernameRegex = /^[a-zA-Z]{1,19}$/;
 
 
 
-const getPokemon = (random = false, id = 132) => {
+const getPokemon = (random = true, id = 132) => {
 
 
-  if(input.value.trim() == 'oi') random = true;
+  if(['giovanna', 'gi', 'gio'].includes(input.value.trim().toLowerCase())) random = false;
 
   if (random) {
     id = Math.floor(Math.random() * 151) + 1;
