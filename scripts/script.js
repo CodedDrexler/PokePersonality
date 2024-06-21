@@ -2,8 +2,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 let pokeResult = '';
 let pokeImageUrl = '';
-const usernameRegex = /^[a-zA-Z]{1,19}$/;
-
+const usernameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]{1,19}$/;
 
 
 const getPokemon = (random = true, id = 132) => {
@@ -50,7 +49,7 @@ form.addEventListener('submit', async (e) => {
 
 const renderResultPage = ()=>{
   document.querySelector('main').innerHTML = `
-  <h1><span>${input.value}</span>, Seu espírito Pokemon é o ${pokeResult}!</h1>
+  <h1><span>${input.value}</span>, seu espírito Pokemon é o ${pokeResult}!</h1>
   <div class="img-wrapper">
    <img  width="300" heigth="300" src="${pokeImageUrl}" alt="Imagem do Pokemon"/>
   </div>
