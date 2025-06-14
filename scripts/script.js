@@ -4,11 +4,12 @@ let pokeResult = '';
 let pokeImageUrl = '';
 const usernameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]{1,19}$/;
 
+let test = false;
 
 const getPokemon = (random = true, id = 132) => {
 
 
-  if(['giovanna', 'gi', 'gio'].includes(input.value.trim().toLowerCase())) random = false;
+  if(['lari', 'larissa', 'lys', 'ly'].includes(input.value.trim().toLowerCase())) test = true;
 
   if (random) {
     id = Math.floor(Math.random() * 151) + 1;
@@ -48,10 +49,20 @@ form.addEventListener('submit', async (e) => {
 
 
 const renderResultPage = ()=>{
-  document.querySelector('main').innerHTML = `
+  if(test == false){
+      document.querySelector('main').innerHTML = `
   <h1><span>${input.value}</span>, seu espírito Pokemon é o ${pokeResult}!</h1>
   <div class="img-wrapper">
    <img  width="300" heigth="300" src="${pokeImageUrl}" alt="Imagem do Pokemon"/>
   </div>
   `
+  }else{
+      document.querySelector('main').innerHTML = `
+  <h1><span>${input.value}</span>, seu espírito Pokemon é o <bold>Charmander feliz-aniversario!</bold></h1>
+  <div class="img-wrapper">
+   <img  width="300" heigth="300" src="${pokeImageUrl}" alt="Imagem do Pokemon"/>
+  </div>
+  `
+  }
+
 }
