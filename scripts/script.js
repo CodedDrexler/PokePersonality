@@ -90,7 +90,7 @@ const renderResultPage = ()=>{
   `
   }else{
       document.querySelector('main').innerHTML = `
-  <h1><span>${input.value}</span>, seu espírito Pokemon é o <bold>Charmander-festivo!</bold></h1>
+  <h1><span>${input.value}</span>, seu espírito Pokemon é o <bold>Charmander-bom-aniversário!</bold></h1>
   <div class="img-wrapper">
    <img  width="300" heigth="300" src="../charmander-red-party-hat.png" alt="Imagem do Pokemon"/>
   </div>
