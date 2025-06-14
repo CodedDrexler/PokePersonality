@@ -86,6 +86,7 @@ const renderResultPage = ()=>{
   <div class="img-wrapper">
    <img  width="300" heigth="300" src="${pokeImageUrl}" alt="Imagem do Pokemon"/>
   </div>
+  <a href="/"> Tente novamente!</a>
   `
   }else{
       document.querySelector('main').innerHTML = `
@@ -93,6 +94,7 @@ const renderResultPage = ()=>{
   <div class="img-wrapper">
    <img  width="300" heigth="300" src="../charmander-red-party-hat.png" alt="Imagem do Pokemon"/>
   </div>
+  <a href="/"> Tente novamente!</a>
   `
   }
 
